@@ -1,3 +1,3 @@
 #!/bin/bash
 rmmod uvcvideo
-insmod /root/modules/uvcvideo.ko
+insmod /usr/lib/modules/uvcvideo.ko

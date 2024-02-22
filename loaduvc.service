@@ -3,7 +3,7 @@ Description=loads custom uvc driver
 
 [Service]
 Type=oneshot
-ExecStart=/root/modules/loaduvc.sh
+ExecStart=/usr/bin/loaduvc.sh
 
 [Install]
 WantedBy=multi-user.target

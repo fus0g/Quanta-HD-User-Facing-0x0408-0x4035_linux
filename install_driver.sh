@@ -4,17 +4,34 @@ echo "### Module For QUANT HD USER FACING BY @Prabhat_Proxy ###"
 echo "     Special Thanks to Giuliano69 for the driver :)"
 echo ""
 
-echo "installing..."
+echo "building"
+echo ""
+
+cd src/uvc
+make -C /lib/modules/$(uname -r)/build M=$(pwd)
+
+if [ -e uvcvideo.ko ]
+then
+    echo "Compiled Successfully"
+    echo "copying module to root."
+    echo ""
+
+    sudo cp -r uvcvideo.ko /usr/lib/modules/uvcvideo.ko
+    cd ../..
+    sudo cp loaduvc.sh /usr/bin/loaduvc.sh
+    echo ""
+    echo "2) copying service to systemd."
+    sudo cp loaduvc.service /etc/systemd/system/loaduvc.service
+    echo ""
+    echo "3) enabling service."
+    sudo systemctl enable loaduvc.service
+    sudo systemctl start loaduvc.service
+
+    echo ""
+    echo "If their are no errors then your camera will start working!"
+else
+    echo "failed to compile module! check docs and report any error"
+fi
 
 echo ""
-echo "1) copying module to root."
-sudo cp -r modules /root/
-echo ""
-echo "2) copying service to systemd."
-sudo cp loaduvc.service /etc/systemd/system/loaduvc.service
-echo ""
-echo "3) enabling service."
-sudo systemctl enable loaduvc.service
-
-echo ""
-echo "If their are no errors then you can reboot and your camera will start working!"
+echo "report any issue on github repo https://github.com/PrabhatProxy/Quanta-HD-User-Facing-0x0408-0x4035_linux/issues "
