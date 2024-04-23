@@ -26,14 +26,14 @@ then
     sudo cp -r uvcvideo.ko /usr/lib/modules/uvcvideo.ko
     cd ../..
     sudo cp loaduvc.sh /usr/bin/loaduvc.sh
-    # echo ""
-    # echo "2) copying service to systemd."
-    # sudo cp loaduvc.service /etc/systemd/system/loaduvc.service
-    # echo ""
-    # echo "3) enabling service."
-    # sudo systemctl enable loaduvc.service
-    # sudo systemctl start loaduvc.service
-    #
+    echo ""
+    echo "2) copying service to systemd."
+    sudo cp loaduvc.service /etc/systemd/system/loaduvc.service
+    echo ""
+    echo "3) enabling service."
+    sudo systemctl enable loaduvc.service
+    sudo systemctl start loaduvc.service
+
     echo ""
     echo "If their are no errors then your camera will start working!"
 else

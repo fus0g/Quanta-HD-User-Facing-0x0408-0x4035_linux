@@ -32,10 +32,16 @@ sudo dnf install kernel-devel
 ```
 git clone git@github.com:PrabhatProxy/Quanta-HD-User-Facing-0x0408-0x4035_linux.git && cd Quanta-HD-User-Facing-0x0408-0x4035_linux
 ```
-### build and install 
+### Method 1: build and install 
 ```
 chmod +x install_driver.sh
 ./install_driver.sh
+```
+### Method 2: Makefile method
+```
+$ make                   // previously installed modules remove and install again
+$ make clean            // clean previous installed modules
+$ make install         // install the module
 ```
 
 Now your camera should be working most probably!
