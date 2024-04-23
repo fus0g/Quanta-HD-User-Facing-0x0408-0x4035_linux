@@ -8,7 +8,14 @@ echo "building"
 echo ""
 
 cd src/uvc
-make -C /lib/modules/$(uname -r)/build M=$(pwd)
+COMPILER_VERSION=$(grep -o 'x86_64-linux-gnu-gcc-[0-9]*' /proc/version | head -n 1)
+if [[ -z $COMPILER_VERSION ]]; then
+    make -C /lib/modules/$(uname -r)/build M=$(pwd)
+else
+    echo "$COMPILER_VERSION"
+    echo ""
+    make -C /lib/modules/$(uname -r)/build M=$(pwd) CC="$COMPILER_VERSION"
+fi
 
 if [ -e uvcvideo.ko ]
 then

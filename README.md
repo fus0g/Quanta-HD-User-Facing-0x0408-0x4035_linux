@@ -15,6 +15,9 @@ if it shows something like this
 
 then you can go ahead.
 
+### Disable Secure boot as the module is not signed and it will give error
+>insmod: ERROR: could not insert module /usr/lib/modules/uvcvideo.ko: key was rejected by service
+
 ### Install Required Packages
 
 ubuntu 
@@ -45,6 +48,11 @@ Now your camera should be working most probably!
    ```
    make -C /lib/modules/$(uname -r)/build M=$(pwd)  
    ```
+   on ubuntu based distros 
+   ```
+   COMPILER_VERSION=$(grep -o 'x86_64-linux-gnu-gcc-[0-9]*' /proc/version | head -n 1)
+   make -C /lib/modules/$(uname -r)/build M=$(pwd) CC="$COMPILER_VERSION"
+   ```
 5. If it compiles fine you would get a uvcvideo.ko module in the folder.
 6. Unload previous version from kernel using
    ```
@@ -61,10 +69,14 @@ Now your camera should be working most probably!
 | Nobara  | 38  |
 | Fedora  |  39  |
 | Ubuntu  |  23.10  |
+| Pop_OS!  |  22.04  |
 
 Tell me if it works for you! i will update the readme!
 
 ### Dont forget to star ⭐ the repo and follow me on github 😉
+***
+## BuyMeACoffee if you want
+<a href="https://www.buymeacoffee.com/PrabhatProxy" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 ***
 ## you can reach me out for any issues and help on ⬇️
    [![Static Badge](https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=Discord&logoColor=white&link=https%3A%2F%2Fdiscord.com%2Finvite%2F5Rpa6RT4)](https://discord.com/invite/5Rpa6RT4)
