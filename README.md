@@ -30,7 +30,7 @@ sudo dnf install kernel-devel
 ```
 ### clone the repo
 ```
-git clone git@github.com:PrabhatProxy/Quanta-HD-User-Facing-0x0408-0x4035_linux.git && cd Quanta-HD-User-Facing-0x0408-0x4035_linux
+git clone https://github.com/fus0g/Quanta-HD-User-Facing-0x0408-0x4035_linux.git && cd Quanta-HD-User-Facing-0x0408-0x4035_linux
 ```
 ### Method 1: build and install 
 ```
@@ -49,7 +49,7 @@ Now your camera should be working most probably!
 ### if this dont work then try doing it manually by the following steps.
 1. Get Your Kernel Source
 2. Navigate to drivers/media/usb/uvc
-3. Add [This](https://github.com/PrabhatProxy/Quanta-HD-User-Facing-0x0408-0x4035_linux/commit/a6d73da23375a367787d748454443513455cd6aa) code to uvc_driver.c
+3. Add [This](https://github.com/fus0g/Quanta-HD-User-Facing-0x0408-0x4035_linux/commit/a6d73da23375a367787d748454443513455cd6aa) code to uvc_driver.c
 4. compile the module only in the same directory using the command
    ```
    make -C /lib/modules/$(uname -r)/build M=$(pwd)  
@@ -86,5 +86,5 @@ Tell me if it works for you! i will update the readme!
 ***
 ## you can reach me out for any issues and help on ⬇️
    [![Static Badge](https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=Discord&logoColor=white&link=https%3A%2F%2Fdiscord.com%2Finvite%2F5Rpa6RT4)](https://discord.com/invite/5Rpa6RT4)
-   [![Static Badge](https://img.shields.io/badge/Telegram-%230088CC?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/prabhat_proxy)
+   [![Static Badge](https://img.shields.io/badge/Telegram-%230088CC?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/fus0g)
 
