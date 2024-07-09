@@ -73,9 +73,15 @@ Now your camera should be working most probably!
 | Distro | version |
 | ------------- | ------------- |
 | Nobara  | 38  |
+| Nobara  | 39  |
 | Fedora  |  39  |
+| Fedora  |  40  |
 | Ubuntu  |  23.10  |
+| Ubuntu  |  24.04  |
 | Pop_OS!  |  22.04  |
+| Arch Linux  |  Latest  |
+| Cachy OS  |  Latest  |
+| Linux Mint  |  22  |
 
 Tell me if it works for you! i will update the readme!
 
