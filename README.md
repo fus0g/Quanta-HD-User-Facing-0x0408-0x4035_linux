@@ -13,11 +13,18 @@ lsusb | grep "Quanta Computer"
 if it shows something like this
 >Bus 003 Device 003: ID 0408:4035 Quanta Computer, Inc.
 
+or
+
+>Bus 003 Device 003: ID 0408:4033 Quanta Computer, Inc.
+
 then you can go ahead.
 
-### Disable Secure boot as the module is not signed and it will give error
+***
+## ⚠️IMPORTANT⚠️
+## 👉 Disable Secure boot in your Laptop's 💻 BIOS 👈
+#### as the module is not signed and it will give error
 >insmod: ERROR: could not insert module /usr/lib/modules/uvcvideo.ko: key was rejected by service
-
+***
 ### Install Required Packages
 
 ubuntu 
@@ -82,6 +89,7 @@ Now your camera should be working most probably!
 | Arch Linux  |  Latest  |
 | Cachy OS  |  Latest  |
 | Linux Mint  |  22  |
+| OpenSuse Tumbleweed  |  Latest  |
 
 Tell me if it works for you! i will update the readme!
 
