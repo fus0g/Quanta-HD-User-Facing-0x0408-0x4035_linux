@@ -27,9 +27,15 @@ then you can go ahead.
 ***
 ### Install Required Packages
 
-ubuntu 
+ubuntu
 ```
 sudo apt install build-essential
+```
+This May be Required on some debian based distros
+```
+sudo apt-get install gcc-12 g++-12
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 20
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 20
 ```
 Fedora/Nobara
 ```
@@ -39,7 +45,7 @@ sudo dnf install kernel-devel
 ```
 git clone https://github.com/fus0g/Quanta-HD-User-Facing-0x0408-0x4035_linux.git && cd Quanta-HD-User-Facing-0x0408-0x4035_linux
 ```
-### Method 1: build and install 
+### Method 1: build and install
 ```
 chmod +x install_driver.sh
 ./install_driver.sh
@@ -59,9 +65,9 @@ Now your camera should be working most probably!
 3. Add [This](https://github.com/fus0g/Quanta-HD-User-Facing-0x0408-0x4035_linux/commit/a6d73da23375a367787d748454443513455cd6aa) code to uvc_driver.c
 4. compile the module only in the same directory using the command
    ```
-   make -C /lib/modules/$(uname -r)/build M=$(pwd)  
+   make -C /lib/modules/$(uname -r)/build M=$(pwd)
    ```
-   on ubuntu based distros 
+   on ubuntu based distros
    ```
    COMPILER_VERSION=$(grep -o 'x86_64-linux-gnu-gcc-[0-9]*' /proc/version | head -n 1)
    make -C /lib/modules/$(uname -r)/build M=$(pwd) CC="$COMPILER_VERSION"
@@ -101,4 +107,3 @@ Tell me if it works for you! i will update the readme!
 ## you can reach me out for any issues and help on ⬇️
    [![Static Badge](https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=Discord&logoColor=white&link=https%3A%2F%2Fdiscord.com%2Finvite%2F5Rpa6RT4)](https://discord.com/invite/5Rpa6RT4)
    [![Static Badge](https://img.shields.io/badge/Telegram-%230088CC?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/fus0g)
-

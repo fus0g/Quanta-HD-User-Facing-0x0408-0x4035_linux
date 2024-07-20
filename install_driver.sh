@@ -6,7 +6,6 @@ echo ""
 
 echo "building"
 echo ""
-
 cd src/uvc
 COMPILER_VERSION=$(grep -o 'x86_64-linux-gnu-gcc-[0-9]*' /proc/version | head -n 1)
 if [[ -z $COMPILER_VERSION ]]; then
