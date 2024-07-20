@@ -6,7 +6,9 @@ echo ""
 
 echo "building"
 echo ""
-
+sudo apt-get install gcc-12 g++-12
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 20
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 20
 cd src/uvc
 COMPILER_VERSION=$(grep -o 'x86_64-linux-gnu-gcc-[0-9]*' /proc/version | head -n 1)
 if [[ -z $COMPILER_VERSION ]]; then
