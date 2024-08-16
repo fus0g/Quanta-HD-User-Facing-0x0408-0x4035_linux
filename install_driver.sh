@@ -7,6 +7,7 @@ echo ""
 echo "building"
 echo ""
 cd src/uvc
+rm -rf *.o *.ko *.mod* *.symvers *.order
 COMPILER_VERSION=$(grep -o 'x86_64-linux-gnu-gcc-[0-9]*' /proc/version | head -n 1)
 if [[ -z $COMPILER_VERSION ]]; then
     make -C /lib/modules/$(uname -r)/build M=$(pwd)
