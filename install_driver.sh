@@ -23,6 +23,8 @@ then
     echo "copying module to root."
     echo ""
 
+    sudo rm -rf /usr/lib/modules/uvcvideo.ko
+    sudo rm -rf /usr/bin/loaduvc.sh
     sudo cp -r uvcvideo.ko /usr/lib/modules/uvcvideo.ko
     cd ../..
     sudo cp loaduvc.sh /usr/bin/loaduvc.sh
