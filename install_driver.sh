@@ -75,7 +75,7 @@ echo ""
 echo "Report any issues on GitHub repo: https://github.com/PrabhatProxy/Quanta-HD-User-Facing-0x0408-0x4035_linux/issues"
 n
     make -C /lib/modules/$(uname -r)/build M=$(pwd)
-else
+then
     echo "$COMPILER_VERSION"
     echo ""
     make -C /lib/modules/$(uname -r)/build M=$(pwd) CC="$COMPILER_VERSION"
